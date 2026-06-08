@@ -395,6 +395,24 @@
       50%{box-shadow:0 4px 32px rgba(37,211,102,.9)}
     }
 
+    /* ============ FLOATING CALL ============ */
+    .call-float {
+      position:fixed; bottom:28px; right:28px;
+      width:58px; height:58px;
+      background:var(--primary); border-radius:50%;
+      display:flex; align-items:center; justify-content:center;
+      box-shadow:0 4px 20px rgba(0,153,230,.5);
+      z-index:9999; transition:var(--transition);
+      animation:callPulse 2.5s infinite;
+      text-decoration:none;
+    }
+    .call-float:hover { transform:scale(1.13); color:#fff; }
+    .call-float i { color:#fff; font-size:1.5rem; }
+    @keyframes callPulse {
+      0%,100%{box-shadow:0 4px 18px rgba(0,153,230,.5)}
+      50%{box-shadow:0 4px 32px rgba(0,153,230,.9)}
+    }
+
     /* scroll top */
     #scrollTop {
       position:fixed; bottom:98px; left:28px;
@@ -1053,6 +1071,11 @@
 <!-- Floating WA -->
 <a href="https://wa.me/96001712?text=مرحباً، أريد الاستفسار عن خدمة نقل العفش" target="_blank" class="wa-float">
   <i class="fab fa-whatsapp"></i>
+</a>
+
+<!-- Floating Call -->
+<a href="tel:96001712" class="call-float">
+  <i class="fas fa-phone-alt"></i>
 </a>
 
 <!-- Scroll Top -->
